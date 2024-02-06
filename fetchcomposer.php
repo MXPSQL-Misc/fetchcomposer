@@ -9,13 +9,14 @@ $stdin = fopen("php://stdin", "r");
 
 // Write a nice banner
 fwrite($stdout, 
-    "Composer Fetcher Script" . PHP_EOL
+    "Fetchcomposer" . PHP_EOL
+    . "A script to fetch composer safely" . PHP_EOL
     . "By MXPSQL" . PHP_EOL . PHP_EOL
 );
 
 { // Check for CLI
-    if(php_sapi_name() != "cli"){
-	echo "Please run this script under a Shell/CLI." . PHP_EOL;
+    if(php_sapi_name() != "cli" || strpos(PHP_SAPI, "cli") != 0){
+	echo "Please run fetchcomposer as a script under a Shell/CLI." . PHP_EOL;
         exit(1);
     }
 }
