@@ -116,7 +116,10 @@ $installer_path = null;
 // Run the installer
 $exitcode = 0;
 {
-    fwrite($stdout, "Executing installer..." . PHP_EOL);
+    fwrite($stdout, "Executing installer..." . PHP_EOL
+     . "Installer is at => " . PHP_EOL
+     . $installer_path . PHP_EOL
+    );
     $output = array();
     $status = exec($whichphp . " " . $installer_path . " --quiet", $output);
 
