@@ -56,7 +56,7 @@ $composerrun = array();
         else if($args == "-h"){
             fwrite($stdout, $argv[0] . " Usage: " . PHP_EOL
                 . "-f - Force to run the installer in the presence of a bad checksum." . PHP_EOL
-                . "-y - Set the directory to download the installer to." . PHP_EOL
+                . "-y - Set the directory to download the installer to, and consequently where composer would be installed to.." . PHP_EOL
                 . "-p - Set for which php to execute the installer." . PHP_EOL
                 . "-h - Show this help message." . PHP_EOL
                 . PHP_EOL 
